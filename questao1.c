@@ -18,7 +18,7 @@ int main(void){
     for (int index = 0; index < tamanho; index++){
         scanf("%d", &vetor[index]);
     }
-
+    //Imprime os elementos em ordem inversa
     for (int index = 0; index > tamanho; index--){
         printf("%i\n", vetor[index]);
     }
