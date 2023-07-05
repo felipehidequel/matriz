@@ -23,5 +23,6 @@ int main(void){
         printf("%i\n", vetor[index]);
     }
 
+    free(vetor);
     return 0;
 }
