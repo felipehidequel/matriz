@@ -6,10 +6,11 @@ int main(void){
     int linhas, colunas;
 
     printf("Informe o numero de linhas e colunas:\n");
-    scanf("%d\n%d", &linhas, &colunas);
+    scanf("%d", &linhas);
+    scanf("%d", &colunas);
 
-    matriz = (int**) malloc (linhas * sizeof(int**));
-    if (matriz=NULL){exit(1);}
+    matriz = (int**) malloc (linhas * sizeof(int));
+    if (matriz==NULL){exit(1);}
 
     for (int cont=0; cont<linhas; cont++){
         matriz[cont] = (int *) malloc(colunas*sizeof(int));
@@ -24,7 +25,7 @@ int main(void){
     }
 
     matrizT = (int**) malloc (linhas * sizeof(int**));
-    if (matrizT=NULL){exit(1);}
+    if (matrizT==NULL){exit(1);}
 
     for (int cont=0; cont<linhas; cont++){
         matrizT[cont] = (int *) malloc(colunas*sizeof(int));
@@ -44,6 +45,17 @@ int main(void){
         for (int coluna = 0; coluna < colunas; coluna++)
         {
             printf("%d ", matriz[linha][coluna]);
+        }
+        printf("\n");        
+    }
+
+    printf("\n");
+
+    for (int linha=0; linha < linhas; linha++)
+    {
+        for (int coluna = 0; coluna < colunas; coluna++)
+        {
+            printf("%d ", matrizT[linha][coluna]);
         }
         printf("\n");        
     }
